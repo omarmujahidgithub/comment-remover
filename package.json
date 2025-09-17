@@ -1,0 +1,100 @@
+{
+  "name": "comment-remover",
+  "displayName": "Python Comment Remover",
+  "description": "Quickly remove comments, docstrings, or copy clean code to your clipboard.",
+  "version": "1.0.0",
+  "publisher": "omarmujahid01",
+  "engines": {
+    "vscode": "^1.81.0"
+  },
+  "icon": "images/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/comment-remover.git"
+  },
+  "license": "MIT",
+  "categories": [
+    "Programming Languages",
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:comment-remover.removeAll",
+    "onCommand:comment-remover.removeHashCommentsOnly",
+    "onCommand:comment-remover.copyWithoutComments"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "comment-remover.removeAll",
+        "title": "Remove All Comments & Docstrings"
+      },
+      {
+        "command": "comment-remover.removeHashCommentsOnly",
+        "title": "Remove Comments (Keep Docstrings)"
+      },
+      {
+        "command": "comment-remover.copyWithoutComments",
+        "title": "Copy Without Comments & Docstrings"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "resourceLangId == python",
+          "command": "comment-remover.removeAll",
+          "group": "navigation@1"
+        },
+        {
+          "when": "resourceLangId == python",
+          "command": "comment-remover.removeHashCommentsOnly",
+          "group": "navigation@2"
+        },
+        {
+          "when": "resourceLangId == python",
+          "command": "comment-remover.copyWithoutComments",
+          "group": "navigation@3"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "comment-remover.removeAll",
+        "key": "ctrl+alt+/",
+        "mac": "cmd+alt+/",
+        "when": "editorTextFocus && resourceLangId == python"
+      },
+      {
+        "command": "comment-remover.removeHashCommentsOnly",
+        "key": "ctrl+alt+i",
+        "mac": "cmd+alt+i",
+        "when": "editorTextFocus && resourceLangId == python"
+      },
+      {
+        "command": "comment-remover.copyWithoutComments",
+        "key": "ctrl+alt+c",
+        "mac": "cmd+alt+c",
+        "when": "editorTextFocus && resourceLangId == python"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.104.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@typescript-eslint/eslint-plugin": "^8.42.0",
+    "@typescript-eslint/parser": "^8.42.0",
+    "eslint": "^9.34.0",
+    "typescript": "^5.9.2",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
