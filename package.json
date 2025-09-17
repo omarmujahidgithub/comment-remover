@@ -1,5 +1,5 @@
 {
-  "name": "comment-remover",
+  "name": "omars-comment-cleaner",
   "displayName": "Python Comment Remover",
   "description": "Quickly remove comments, docstrings, or copy clean code to your clipboard.",
   "version": "1.0.0",
