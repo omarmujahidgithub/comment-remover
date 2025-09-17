@@ -2,7 +2,7 @@
   "name": "omars-comment-cleaner",
   "displayName": "Python Comment Remover",
   "description": "Quickly remove comments, docstrings, or copy clean code to your clipboard.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": "omarmujahid01",
   "engines": {
     "vscode": "^1.104.0"
@@ -41,17 +41,17 @@
     "menus": {
       "editor/context": [
         {
-          "when": "resourceLangId == python",
+          "when": "resourceLangId == python || notebookType == 'jupyter-notebook'",
           "command": "comment-remover.removeAll",
           "group": "navigation@1"
         },
         {
-          "when": "resourceLangId == python",
+          "when": "resourceLangId == python || notebookType == 'jupyter-notebook'",
           "command": "comment-remover.removeHashCommentsOnly",
           "group": "navigation@2"
         },
         {
-          "when": "resourceLangId == python",
+          "when": "resourceLangId == python || notebookType == 'jupyter-notebook'",
           "command": "comment-remover.copyWithoutComments",
           "group": "navigation@3"
         }
@@ -62,19 +62,19 @@
         "command": "comment-remover.removeAll",
         "key": "ctrl+alt+/",
         "mac": "cmd+alt+/",
-        "when": "editorTextFocus && resourceLangId == python"
+        "when": "editorTextFocus && (resourceLangId == python || notebookType == 'jupyter-notebook')"
       },
       {
         "command": "comment-remover.removeHashCommentsOnly",
         "key": "ctrl+alt+i",
         "mac": "cmd+alt+i",
-        "when": "editorTextFocus && resourceLangId == python"
+        "when": "editorTextFocus && (resourceLangId == python || notebookType == 'jupyter-notebook')"
       },
       {
         "command": "comment-remover.copyWithoutComments",
         "key": "ctrl+alt+c",
         "mac": "cmd+alt+c",
-        "when": "editorTextFocus && resourceLangId == python"
+        "when": "editorTextFocus && (resourceLangId == python || notebookType == 'jupyter-notebook')"
       }
     ]
   },

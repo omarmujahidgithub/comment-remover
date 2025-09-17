@@ -1,5 +1,5 @@
 # Python Comment Remover
-A powerful and simple VS Code extension to instantly remove comments and docstrings from your Python files. Clean up your code for presentation, analysis, or to get rid of unwanted AI-generated comments with a single command.
+A powerful and simple VS Code extension to instantly remove comments and docstrings from your Python files and Jupyter Notebook (.ipynb) code cells. Clean up your code for presentation, analysis, or to get rid of unwanted AI-generated comments with a single command.
 
 ## Features
 This extension provides three distinct commands to give you full control over your code's comments:
@@ -9,6 +9,8 @@ This extension provides three distinct commands to give you full control over yo
 ✨ Remove Comments (Keep Docstrings): A surgical removal. This command removes all # comments (both full-line and inline) but intelligently preserves your important function and class docstrings. (Ctrl+Alt+I)
 
 📋 Copy Without Comments & Docstrings: A clipboard-ready command. This cleans the entire file by removing all comments and docstrings and then copies the result directly to your clipboard without modifying the open file. (Ctrl+Alt+C)
+
+    Note: You can now also use these commands on code cells within Jupyter Notebook files (.ipynb) directly from VS Code. 
 
 ## Demonstration
 Here’s a quick look at the "Remove All" command in action.
