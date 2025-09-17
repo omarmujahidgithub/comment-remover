@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "publisher": "omarmujahid01",
   "engines": {
-    "vscode": "^1.81.0"
+    "vscode": "^1.104.0"
   },
   "icon": "images/icon.png",
   "repository": {
