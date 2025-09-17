@@ -57,6 +57,8 @@ Copy Without Comments & Docstrings	Copies the cleaned code to the clipboard.	Ctr
     Added "Remove Comments (Keep Docstrings)" command.
 
     Added "Copy Without Comments & Docstrings" command.
+### 1.0.2
+    Added .ipynb code cells support based on my friend's Nour recommendation.
 
 ## Contributing
 Found a bug or have a feature request? Please open an issue on the GitHub repository, or contact me on omar.mujahid.github@gmail.com
